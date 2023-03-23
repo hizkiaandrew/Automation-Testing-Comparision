@@ -1,0 +1,10 @@
+# PyCharm project settings
+.idea
+
+# Robot Ouput files
+*.html
+*.xml
+*.png
+
+venv/
+ENV/

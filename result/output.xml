@@ -1,104 +1,541 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230323 18:48:40.235" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230324 00:55:43.968" rpa="false" schemaversion="3">
 <suite id="s1" name="Tests" source="F:\Kuliah\TA\Implementation\RobotFramework\tests">
 <suite id="s1-s1" name="Login Tests" source="F:\Kuliah\TA\Implementation\RobotFramework\tests\login_tests.robot">
-<test id="s1-s1-t1" name="User is able to access Login page by url" line="15">
+<test id="s1-s1-t1" name="User is able to access Login page by url" line="26">
 <kw name="Open Home Page Using Chrome Browser" library="resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${HOME_URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230323 18:48:40.517" level="INFO">Opening browser 'Chrome' to base url 'https://staging.komunitasmea.com/'.</msg>
-<status status="PASS" starttime="20230323 18:48:40.516" endtime="20230323 18:48:42.283"/>
+<msg timestamp="20230324 00:55:44.312" level="INFO">Opening browser 'Chrome' to base url 'https://staging.komunitasmea.com/'.</msg>
+<status status="PASS" starttime="20230324 00:55:44.311" endtime="20230324 00:55:46.222"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>${WIDTH_WINDOW}</arg>
 <arg>${HEIGHT_WINDOW}</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20230323 18:48:42.283" endtime="20230323 18:48:42.414"/>
+<status status="PASS" starttime="20230324 00:55:46.223" endtime="20230324 00:55:46.339"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:40.516" endtime="20230323 18:48:42.414"/>
+<status status="PASS" starttime="20230324 00:55:44.311" endtime="20230324 00:55:46.340"/>
 </kw>
 <kw name="Given User is on Home Page" library="home_steps">
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230323 18:48:45.416" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230323 18:48:42.415" endtime="20230323 18:48:45.416"/>
+<msg timestamp="20230324 00:55:49.342" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230324 00:55:46.341" endtime="20230324 00:55:49.342"/>
 </kw>
 <kw name="Verify Current Url With Home Url" library="home_pages">
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>${HOME_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20230323 18:48:45.421" level="INFO">Current location is 'https://staging.komunitasmea.com/'.</msg>
-<status status="PASS" starttime="20230323 18:48:45.416" endtime="20230323 18:48:45.421"/>
+<msg timestamp="20230324 00:55:49.353" level="INFO">Current location is 'https://staging.komunitasmea.com/'.</msg>
+<status status="PASS" starttime="20230324 00:55:49.343" endtime="20230324 00:55:49.353"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:45.416" endtime="20230323 18:48:45.421"/>
+<status status="PASS" starttime="20230324 00:55:49.342" endtime="20230324 00:55:49.353"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:42.415" endtime="20230323 18:48:45.421"/>
+<status status="PASS" starttime="20230324 00:55:46.340" endtime="20230324 00:55:49.354"/>
 </kw>
 <kw name="And User is not logged in yet" library="home_steps">
 <kw name="Verify user login status" library="home_pages">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230323 18:48:47.423" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230323 18:48:45.422" endtime="20230323 18:48:47.423"/>
+<msg timestamp="20230324 00:55:51.356" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230324 00:55:49.356" endtime="20230324 00:55:51.356"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>css:[data-testid='navbar-menu'] [data-testid='navbar-btn-login-register']</arg>
 <arg>Daftar/Masuk</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20230323 18:48:47.425" level="INFO">Verifying element 'css:[data-testid='navbar-menu'] [data-testid='navbar-btn-login-register']' contains exact text 'Daftar/Masuk'.</msg>
-<status status="PASS" starttime="20230323 18:48:47.423" endtime="20230323 18:48:47.480"/>
+<msg timestamp="20230324 00:55:51.357" level="INFO">Verifying element 'css:[data-testid='navbar-menu'] [data-testid='navbar-btn-login-register']' contains exact text 'Daftar/Masuk'.</msg>
+<status status="PASS" starttime="20230324 00:55:51.356" endtime="20230324 00:55:51.385"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:45.422" endtime="20230323 18:48:47.480"/>
+<status status="PASS" starttime="20230324 00:55:49.355" endtime="20230324 00:55:51.385"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:45.422" endtime="20230323 18:48:47.480"/>
+<status status="PASS" starttime="20230324 00:55:49.355" endtime="20230324 00:55:51.385"/>
 </kw>
 <kw name="When User go to Login Page via url" library="login_steps">
 <kw name="Go to Login Page via url" library="login_pages">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${LOGIN_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230323 18:48:47.482" level="INFO">Opening url 'https://staging.komunitasmea.com/login'</msg>
-<status status="PASS" starttime="20230323 18:48:47.482" endtime="20230323 18:48:47.634"/>
+<msg timestamp="20230324 00:55:51.387" level="INFO">Opening url 'https://staging.komunitasmea.com/login'</msg>
+<status status="PASS" starttime="20230324 00:55:51.386" endtime="20230324 00:55:51.510"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:47.481" endtime="20230323 18:48:47.634"/>
+<status status="PASS" starttime="20230324 00:55:51.386" endtime="20230324 00:55:51.510"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:47.481" endtime="20230323 18:48:47.634"/>
+<status status="PASS" starttime="20230324 00:55:51.386" endtime="20230324 00:55:51.510"/>
 </kw>
 <kw name="Then User is navigated to Login Page" library="login_steps">
 <kw name="Verify Current Url With Login Url" library="login_pages">
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>${LOGIN_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20230323 18:48:47.725" level="INFO">Current location is 'https://staging.komunitasmea.com/login'.</msg>
-<status status="PASS" starttime="20230323 18:48:47.637" endtime="20230323 18:48:47.725"/>
+<msg timestamp="20230324 00:55:51.588" level="INFO">Current location is 'https://staging.komunitasmea.com/login'.</msg>
+<status status="PASS" starttime="20230324 00:55:51.511" endtime="20230324 00:55:51.588"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:47.637" endtime="20230323 18:48:47.726"/>
+<status status="PASS" starttime="20230324 00:55:51.511" endtime="20230324 00:55:51.588"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:47.637" endtime="20230323 18:48:47.726"/>
+<status status="PASS" starttime="20230324 00:55:51.510" endtime="20230324 00:55:51.588"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230323 18:48:47.726" endtime="20230323 18:48:49.884"/>
+<status status="PASS" starttime="20230324 00:55:51.589" endtime="20230324 00:55:53.727"/>
 </kw>
-<status status="PASS" starttime="20230323 18:48:40.515" endtime="20230323 18:48:49.885"/>
+<status status="PASS" starttime="20230324 00:55:44.310" endtime="20230324 00:55:53.728"/>
 </test>
-<status status="PASS" starttime="20230323 18:48:40.264" endtime="20230323 18:48:49.888"/>
+<test id="s1-s1-t2" name="User cannot login with inputted credentials" line="32">
+<kw name="Open Home Page Using Chrome Browser" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HOME_URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230324 00:55:53.733" level="INFO">Opening browser 'Chrome' to base url 'https://staging.komunitasmea.com/'.</msg>
+<status status="PASS" starttime="20230324 00:55:53.732" endtime="20230324 00:55:56.037"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>${WIDTH_WINDOW}</arg>
+<arg>${HEIGHT_WINDOW}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20230324 00:55:56.037" endtime="20230324 00:55:56.161"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:53.732" endtime="20230324 00:55:56.162"/>
+</kw>
+<kw name="user cannot logged in with inputted credentials">
+<arg>${TEST_WRONG_EMAIL}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<kw name="Given User is on login page" library="login_steps">
+<kw name="Go to Login Page via url" library="login_pages">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230324 00:55:56.163" level="INFO">Opening url 'https://staging.komunitasmea.com/login'</msg>
+<status status="PASS" starttime="20230324 00:55:56.163" endtime="20230324 00:55:56.920"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:56.163" endtime="20230324 00:55:56.921"/>
+</kw>
+<kw name="Verify Current Url With Login Url" library="login_pages">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230324 00:55:56.943" level="INFO">Current location is 'https://staging.komunitasmea.com/login'.</msg>
+<status status="PASS" starttime="20230324 00:55:56.921" endtime="20230324 00:55:56.943"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:56.921" endtime="20230324 00:55:56.943"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:56.162" endtime="20230324 00:55:56.943"/>
+</kw>
+<kw name="When User login by entering email field with value" library="login_steps">
+<arg>${email}</arg>
+<kw name="Input Username on Email Field" library="login_pages">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginEmailField}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:55:56.944" endtime="20230324 00:55:58.116"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginEmailField}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230324 00:55:58.117" level="INFO">Typing text 'testemailwrong@email.com' into text field 'css:[data-testid='login-field-email']'.</msg>
+<status status="PASS" starttime="20230324 00:55:58.116" endtime="20230324 00:55:58.295"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:56.944" endtime="20230324 00:55:58.295"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:56.943" endtime="20230324 00:55:58.295"/>
+</kw>
+<kw name="And User login by entering password field with value" library="login_steps">
+<arg>${password}</arg>
+<kw name="Input Password on Password Field" library="login_pages">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:55:58.296" endtime="20230324 00:55:58.333"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230324 00:55:58.334" level="INFO">Typing password into text field 'css:[data-testid='login-password']'.</msg>
+<msg timestamp="20230324 00:55:58.401" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230324 00:55:58.468" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230324 00:55:58.333" endtime="20230324 00:55:58.468"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:58.296" endtime="20230324 00:55:58.468"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:58.295" endtime="20230324 00:55:58.468"/>
+</kw>
+<kw name="Then User submitted all input field" library="login_steps">
+<kw name="Click button submit" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginBtn}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:55:58.469" endtime="20230324 00:55:58.503"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230324 00:55:58.504" level="INFO">Clicking button 'css:[data-testid='login-btn-login']'.</msg>
+<status status="PASS" starttime="20230324 00:55:58.503" endtime="20230324 00:55:58.613"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:58.469" endtime="20230324 00:55:58.613"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:58.468" endtime="20230324 00:55:58.613"/>
+</kw>
+<kw name="But User cannot be logged in" library="login_steps">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${statusErrorMessage}</var>
+<arg>Is Status Error Message Visible</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Is Status Error Message Visible" library="login_pages">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230324 00:56:00.615" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230324 00:55:58.615" endtime="20230324 00:56:00.615"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessage}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230324 00:56:00.656" level="INFO">Element 'css:[data-testid='messagebox-error']' is displayed.</msg>
+<status status="PASS" starttime="20230324 00:56:00.615" endtime="20230324 00:56:00.656"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:58.615" endtime="20230324 00:56:00.656"/>
+</kw>
+<msg timestamp="20230324 00:56:00.657" level="INFO">${statusErrorMessage} = True</msg>
+<status status="PASS" starttime="20230324 00:55:58.614" endtime="20230324 00:56:00.657"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${statusMessageBox}</var>
+<arg>Is Status Message Box Visible</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Is Status Message Box Visible" library="login_pages">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230324 00:56:02.658" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230324 00:56:00.657" endtime="20230324 00:56:02.658"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${messageBox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230324 00:56:02.778" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230324 00:56:02.778" level="FAIL">The element 'css:[data-testid='login-error-message-email']' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20230324 00:56:02.658" endtime="20230324 00:56:02.780"/>
+</kw>
+<status status="FAIL" starttime="20230324 00:56:00.657" endtime="20230324 00:56:02.780"/>
+</kw>
+<msg timestamp="20230324 00:56:02.780" level="INFO">${statusMessageBox} = False</msg>
+<status status="PASS" starttime="20230324 00:56:00.657" endtime="20230324 00:56:02.780"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${statusErrorMessage} or ${statusMessageBox}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230324 00:56:02.780" endtime="20230324 00:56:02.781"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:58.613" endtime="20230324 00:56:02.781"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:56.162" endtime="20230324 00:56:02.781"/>
+</kw>
+<kw name="user cannot logged in with inputted credentials">
+<arg>${TEST_EMAIL_RESET}</arg>
+<arg>${TEST_WRONG_PASSWORD}</arg>
+<kw name="Given User is on login page" library="login_steps">
+<kw name="Go to Login Page via url" library="login_pages">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230324 00:56:02.782" level="INFO">Opening url 'https://staging.komunitasmea.com/login'</msg>
+<status status="PASS" starttime="20230324 00:56:02.782" endtime="20230324 00:56:02.932"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:02.782" endtime="20230324 00:56:02.932"/>
+</kw>
+<kw name="Verify Current Url With Login Url" library="login_pages">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230324 00:56:03.086" level="INFO">Current location is 'https://staging.komunitasmea.com/login'.</msg>
+<status status="PASS" starttime="20230324 00:56:02.932" endtime="20230324 00:56:03.086"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:02.932" endtime="20230324 00:56:03.086"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:02.782" endtime="20230324 00:56:03.087"/>
+</kw>
+<kw name="When User login by entering email field with value" library="login_steps">
+<arg>${email}</arg>
+<kw name="Input Username on Email Field" library="login_pages">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginEmailField}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:56:03.087" endtime="20230324 00:56:03.154"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginEmailField}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230324 00:56:03.154" level="INFO">Typing text 'testemailresetted@email.com' into text field 'css:[data-testid='login-field-email']'.</msg>
+<status status="PASS" starttime="20230324 00:56:03.154" endtime="20230324 00:56:03.505"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.087" endtime="20230324 00:56:03.505"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.087" endtime="20230324 00:56:03.505"/>
+</kw>
+<kw name="And User login by entering password field with value" library="login_steps">
+<arg>${password}</arg>
+<kw name="Input Password on Password Field" library="login_pages">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:56:03.506" endtime="20230324 00:56:03.599"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230324 00:56:03.600" level="INFO">Typing password into text field 'css:[data-testid='login-password']'.</msg>
+<msg timestamp="20230324 00:56:03.634" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230324 00:56:03.686" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230324 00:56:03.599" endtime="20230324 00:56:03.686"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.506" endtime="20230324 00:56:03.686"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.505" endtime="20230324 00:56:03.686"/>
+</kw>
+<kw name="Then User submitted all input field" library="login_steps">
+<kw name="Click button submit" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginBtn}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:56:03.687" endtime="20230324 00:56:03.709"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230324 00:56:03.709" level="INFO">Clicking button 'css:[data-testid='login-btn-login']'.</msg>
+<status status="PASS" starttime="20230324 00:56:03.709" endtime="20230324 00:56:03.920"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.686" endtime="20230324 00:56:03.920"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.686" endtime="20230324 00:56:03.920"/>
+</kw>
+<kw name="But User cannot be logged in" library="login_steps">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${statusErrorMessage}</var>
+<arg>Is Status Error Message Visible</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Is Status Error Message Visible" library="login_pages">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230324 00:56:05.922" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230324 00:56:03.921" endtime="20230324 00:56:05.922"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessage}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230324 00:56:05.939" level="INFO">Element 'css:[data-testid='messagebox-error']' is displayed.</msg>
+<status status="PASS" starttime="20230324 00:56:05.922" endtime="20230324 00:56:05.939"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.921" endtime="20230324 00:56:05.939"/>
+</kw>
+<msg timestamp="20230324 00:56:05.939" level="INFO">${statusErrorMessage} = True</msg>
+<status status="PASS" starttime="20230324 00:56:03.921" endtime="20230324 00:56:05.939"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${statusMessageBox}</var>
+<arg>Is Status Message Box Visible</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Is Status Message Box Visible" library="login_pages">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230324 00:56:07.940" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230324 00:56:05.940" endtime="20230324 00:56:07.940"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${messageBox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230324 00:56:08.066" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230324 00:56:08.066" level="FAIL">The element 'css:[data-testid='login-error-message-email']' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20230324 00:56:07.940" endtime="20230324 00:56:08.067"/>
+</kw>
+<status status="FAIL" starttime="20230324 00:56:05.940" endtime="20230324 00:56:08.067"/>
+</kw>
+<msg timestamp="20230324 00:56:08.067" level="INFO">${statusMessageBox} = False</msg>
+<status status="PASS" starttime="20230324 00:56:05.939" endtime="20230324 00:56:08.067"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${statusErrorMessage} or ${statusMessageBox}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230324 00:56:08.067" endtime="20230324 00:56:08.068"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:03.920" endtime="20230324 00:56:08.068"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:02.781" endtime="20230324 00:56:08.068"/>
+</kw>
+<kw name="user cannot logged in with inputted credentials">
+<arg>${TEST_EMAIL_NONVALID}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<kw name="Given User is on login page" library="login_steps">
+<kw name="Go to Login Page via url" library="login_pages">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230324 00:56:08.069" level="INFO">Opening url 'https://staging.komunitasmea.com/login'</msg>
+<status status="PASS" starttime="20230324 00:56:08.069" endtime="20230324 00:56:08.213"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.069" endtime="20230324 00:56:08.213"/>
+</kw>
+<kw name="Verify Current Url With Login Url" library="login_pages">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230324 00:56:08.263" level="INFO">Current location is 'https://staging.komunitasmea.com/login'.</msg>
+<status status="PASS" starttime="20230324 00:56:08.214" endtime="20230324 00:56:08.263"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.214" endtime="20230324 00:56:08.263"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.069" endtime="20230324 00:56:08.263"/>
+</kw>
+<kw name="When User login by entering email field with value" library="login_steps">
+<arg>${email}</arg>
+<kw name="Input Username on Email Field" library="login_pages">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginEmailField}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:56:08.264" endtime="20230324 00:56:08.732"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginEmailField}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230324 00:56:08.732" level="INFO">Typing text 'testemailnonvalid.com' into text field 'css:[data-testid='login-field-email']'.</msg>
+<status status="PASS" starttime="20230324 00:56:08.732" endtime="20230324 00:56:08.842"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.264" endtime="20230324 00:56:08.842"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.263" endtime="20230324 00:56:08.842"/>
+</kw>
+<kw name="And User login by entering password field with value" library="login_steps">
+<arg>${password}</arg>
+<kw name="Input Password on Password Field" library="login_pages">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:56:08.843" endtime="20230324 00:56:08.868"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230324 00:56:08.868" level="INFO">Typing password into text field 'css:[data-testid='login-password']'.</msg>
+<msg timestamp="20230324 00:56:08.906" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230324 00:56:09.025" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230324 00:56:08.868" endtime="20230324 00:56:09.025"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.842" endtime="20230324 00:56:09.025"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.842" endtime="20230324 00:56:09.025"/>
+</kw>
+<kw name="Then User submitted all input field" library="login_steps">
+<kw name="Click button submit" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${loginBtn}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230324 00:56:09.026" endtime="20230324 00:56:09.051"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230324 00:56:09.052" level="INFO">Clicking button 'css:[data-testid='login-btn-login']'.</msg>
+<status status="PASS" starttime="20230324 00:56:09.052" endtime="20230324 00:56:09.170"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:09.026" endtime="20230324 00:56:09.170"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:09.026" endtime="20230324 00:56:09.171"/>
+</kw>
+<kw name="But User cannot be logged in" library="login_steps">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${statusErrorMessage}</var>
+<arg>Is Status Error Message Visible</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Is Status Error Message Visible" library="login_pages">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230324 00:56:11.173" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230324 00:56:09.171" endtime="20230324 00:56:11.173"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessage}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230324 00:56:11.310" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230324 00:56:11.310" level="FAIL">Element with locator 'css:[data-testid='messagebox-error']' not found.</msg>
+<status status="FAIL" starttime="20230324 00:56:11.173" endtime="20230324 00:56:11.312"/>
+</kw>
+<status status="FAIL" starttime="20230324 00:56:09.171" endtime="20230324 00:56:11.312"/>
+</kw>
+<msg timestamp="20230324 00:56:11.312" level="INFO">${statusErrorMessage} = False</msg>
+<status status="PASS" starttime="20230324 00:56:09.171" endtime="20230324 00:56:11.312"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${statusMessageBox}</var>
+<arg>Is Status Message Box Visible</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Is Status Message Box Visible" library="login_pages">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230324 00:56:13.313" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230324 00:56:11.313" endtime="20230324 00:56:13.313"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${messageBox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230324 00:56:13.342" level="INFO">Element 'css:[data-testid='login-error-message-email']' is displayed.</msg>
+<status status="PASS" starttime="20230324 00:56:13.313" endtime="20230324 00:56:13.342"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:11.312" endtime="20230324 00:56:13.342"/>
+</kw>
+<msg timestamp="20230324 00:56:13.342" level="INFO">${statusMessageBox} = True</msg>
+<status status="PASS" starttime="20230324 00:56:11.312" endtime="20230324 00:56:13.342"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${statusErrorMessage} or ${statusMessageBox}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230324 00:56:13.342" endtime="20230324 00:56:13.343"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:09.171" endtime="20230324 00:56:13.343"/>
+</kw>
+<status status="PASS" starttime="20230324 00:56:08.068" endtime="20230324 00:56:13.343"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230324 00:56:13.343" endtime="20230324 00:56:15.484"/>
+</kw>
+<status status="PASS" starttime="20230324 00:55:53.731" endtime="20230324 00:56:15.485"/>
+</test>
+<status status="PASS" starttime="20230324 00:55:44.055" endtime="20230324 00:56:15.488"/>
 </suite>
-<status status="PASS" starttime="20230323 18:48:40.237" endtime="20230323 18:48:49.891"/>
+<status status="PASS" starttime="20230324 00:55:43.970" endtime="20230324 00:56:15.492"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login Tests">Tests.Login Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Login Tests">Tests.Login Tests</stat>
 </suite>
 </statistics>
 <errors>
