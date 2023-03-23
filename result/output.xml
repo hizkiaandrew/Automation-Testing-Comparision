@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230323 18:48:40.235" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="F:\Kuliah\TA\Implementation\RobotFramework\tests">
+<suite id="s1-s1" name="Login Tests" source="F:\Kuliah\TA\Implementation\RobotFramework\tests\login_tests.robot">
+<test id="s1-s1-t1" name="User is able to access Login page by url" line="15">
+<kw name="Open Home Page Using Chrome Browser" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HOME_URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230323 18:48:40.517" level="INFO">Opening browser 'Chrome' to base url 'https://staging.komunitasmea.com/'.</msg>
+<status status="PASS" starttime="20230323 18:48:40.516" endtime="20230323 18:48:42.283"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>${WIDTH_WINDOW}</arg>
+<arg>${HEIGHT_WINDOW}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20230323 18:48:42.283" endtime="20230323 18:48:42.414"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:40.516" endtime="20230323 18:48:42.414"/>
+</kw>
+<kw name="Given User is on Home Page" library="home_steps">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230323 18:48:45.416" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230323 18:48:42.415" endtime="20230323 18:48:45.416"/>
+</kw>
+<kw name="Verify Current Url With Home Url" library="home_pages">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${HOME_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230323 18:48:45.421" level="INFO">Current location is 'https://staging.komunitasmea.com/'.</msg>
+<status status="PASS" starttime="20230323 18:48:45.416" endtime="20230323 18:48:45.421"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:45.416" endtime="20230323 18:48:45.421"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:42.415" endtime="20230323 18:48:45.421"/>
+</kw>
+<kw name="And User is not logged in yet" library="home_steps">
+<kw name="Verify user login status" library="home_pages">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230323 18:48:47.423" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230323 18:48:45.422" endtime="20230323 18:48:47.423"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>css:[data-testid='navbar-menu'] [data-testid='navbar-btn-login-register']</arg>
+<arg>Daftar/Masuk</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230323 18:48:47.425" level="INFO">Verifying element 'css:[data-testid='navbar-menu'] [data-testid='navbar-btn-login-register']' contains exact text 'Daftar/Masuk'.</msg>
+<status status="PASS" starttime="20230323 18:48:47.423" endtime="20230323 18:48:47.480"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:45.422" endtime="20230323 18:48:47.480"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:45.422" endtime="20230323 18:48:47.480"/>
+</kw>
+<kw name="When User go to Login Page via url" library="login_steps">
+<kw name="Go to Login Page via url" library="login_pages">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230323 18:48:47.482" level="INFO">Opening url 'https://staging.komunitasmea.com/login'</msg>
+<status status="PASS" starttime="20230323 18:48:47.482" endtime="20230323 18:48:47.634"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:47.481" endtime="20230323 18:48:47.634"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:47.481" endtime="20230323 18:48:47.634"/>
+</kw>
+<kw name="Then User is navigated to Login Page" library="login_steps">
+<kw name="Verify Current Url With Login Url" library="login_pages">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230323 18:48:47.725" level="INFO">Current location is 'https://staging.komunitasmea.com/login'.</msg>
+<status status="PASS" starttime="20230323 18:48:47.637" endtime="20230323 18:48:47.725"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:47.637" endtime="20230323 18:48:47.726"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:47.637" endtime="20230323 18:48:47.726"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230323 18:48:47.726" endtime="20230323 18:48:49.884"/>
+</kw>
+<status status="PASS" starttime="20230323 18:48:40.515" endtime="20230323 18:48:49.885"/>
+</test>
+<status status="PASS" starttime="20230323 18:48:40.264" endtime="20230323 18:48:49.888"/>
+</suite>
+<status status="PASS" starttime="20230323 18:48:40.237" endtime="20230323 18:48:49.891"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login Tests">Tests.Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
